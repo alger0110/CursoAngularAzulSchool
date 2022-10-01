@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Noticias';
+  suma = 5 + 1;
+  nombre = "Emanuel";
+  apellido = "Garcia";
+  arreglo = ["Nombre", "Apelido", "Edad"]
 }
