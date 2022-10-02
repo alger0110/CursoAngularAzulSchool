@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponseApi } from 'src/app/core/interfaces/response-api';
+import { ApiService } from '../../../core/services/api.service';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
+  news: any;
+  constructor(private apiService: ApiService) {}
 
-  constructor() { }
+  async ngOnInit() {
+    await this.apiService
+      .getHttp()
+      .toPromise()
+      .then((data: ResponseApi) => {
+        console.log(data);
 
-  ngOnInit(): void {
+        this.news = data;
+      })
+      .catch((error) => console.error(error.error.message));
   }
-
 }

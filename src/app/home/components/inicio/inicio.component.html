@@ -1,11 +1,14 @@
-<p>inicio works!</p>
-
-<div appColorpicker class="directive">Color Picker</div>
-
-<br><br><br>
-<a routerLink="/security/account">Ir a mi cuenta</a>
-
-<br><br><br>
-
-<h1 *appMultiplicar="5">Mi Directiva Personalizada</h1>
-
+<div *ngFor="let notice of news.sources">
+    <h1>Nombre: <span>{{notice.name}}</span></h1>
+    <p>Descripcion: <span>{{notice.description}}</span></p>
+    <div ngSwitch="{{notice.language}}">
+        <div *ngSwitchCase="'es'">
+            <span>Idioma: Español</span>
+        </div>
+        <div *ngSwitchCase="'en'">
+            <span>Idioma: Inglés</span>
+        </div>
+    </div>
+    <p>Nombre: <span>{{notice.name}}</span></p>
+    <p>URL: <span>{{notice.url}}</span></p>
+</div>

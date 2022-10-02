@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CoreModule } from '../core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [NotfoundComponent],
@@ -16,6 +17,7 @@ import { CoreModule } from '../core/core.module';
     MatCardModule,
     MatButtonModule,
     CoreModule,
+    HttpClientModule,
   ],
   exports: [
     MatFormFieldModule,
@@ -23,6 +25,7 @@ import { CoreModule } from '../core/core.module';
     MatCardModule,
     MatButtonModule,
     CoreModule,
+    HttpClientModule,
   ],
 })
 export class SharedModule {}
