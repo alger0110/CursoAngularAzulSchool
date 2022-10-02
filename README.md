@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Install Packages
 
-Run `npm install` to install all pacakages
+Run `npm install` to install all pacakages.
 
 ## Code scaffolding
 
