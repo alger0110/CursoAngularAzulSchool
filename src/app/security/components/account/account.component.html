@@ -1,1 +1,13 @@
 <h1>Bienvenido {{nameUser}}</h1>
+
+
+<h1>Roles del Usuario</h1>
+<div *ngFor="let rol of roles; let i = index" [ngClass]="rol.permanent ? 'rol-permanente' : 'rol-temporal' ">
+    <span>{{rol.name}} esta en la posición {{i}}</span>
+</div>
+
+<br><br><br>
+<h1>Categorias de noticias</h1>
+<div *ngFor="let category of newsCategory; let iterador = index" [ngClass]="category.allday ? 'allday' : 'noAllday' ">
+    <span>{{category.name}} esta en la posición {{iterador}}</span>
+</div>
